@@ -1,0 +1,26 @@
+name: Build PS4 FBNeo Core
+on: workflow_dispatch # Allows you to trigger the build manually via the web UI
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: orbisdev/orbisdev:latest # Uses the pre-configured PS4 toolchain container
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Compile Core
+        run: |
+           git clone https://github.com/finalburnneo/FBNeo.git
+          cd FBNeo/src/burner/libretro
+          make generate-files
+          make platform=orbis -j$(nproc)
+
+      - name: Upload Compiled Core Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fbneo_ps4_core
+          path: |
+            FBNeo/src/burner/libretro/*.elf
+            FBNeo/src/burner/libretro/*.self
+            FBNeo/src/burner/libretro/*.a
