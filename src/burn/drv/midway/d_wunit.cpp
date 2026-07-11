@@ -1715,10 +1715,12 @@ struct BurnDriver BurnDrvNbamhtx = {
 	"nbamhtx", "nbahangt", NULL, NULL, "2026",
 	"NBA Super Maximum Hangtime (Custom Rebuild 07/02/26)\0", NULL, "hack", "MIDWAY Wolf-Unit",
 	NULL, NULL, NULL, NULL,
-	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 4, HARDWARE_MIDWAY_WUNIT, GBF_SPORTSMISC, 0,
+	BDF_GAME_WORKING | BDF_CLONE, 4, HARDWARE_MIDWAY_WUNIT, GBF_MISC, 0,
 	NULL, nbamhtxRomInfo, nbamhtxRomName, NULL, NULL, NULL, NULL, NbahangtInputInfo, NbahangtDIPInfo,
-	WolfUnitInit, WolfUnitExit, WolfUnitFrame, WolfUnitDraw, WolfUnitScan, &nWolfUnitRecalc, 0x8000,
-	400, 256, 4, 3
+    WolfUnitInit, WolfUnitExit, WolfUnitFrame, WolfUnitDraw, WolfUnitScan, &nWolfUnitRecalc, 0x8000,
+    400, 256, 4, 3
+};
+
 };
 
 // Rampage: World Tour (rev 1.3)
