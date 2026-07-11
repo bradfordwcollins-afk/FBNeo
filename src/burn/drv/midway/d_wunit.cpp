@@ -446,7 +446,7 @@ static struct BurnInputInfo WwfmaniaInputList[] = {
 	{"Service",		    BIT_DIGITAL,	nWolfUnitJoy3 + 6,	"service"},
 	{"Service Mode",	BIT_DIGITAL,	nWolfUnitJoy3 + 4,	"diag"},
 	{"Tilt",		    BIT_DIGITAL,	nWolfUnitJoy3 + 3,	"tilt"},
-	{"Dip A",		    BIT_DIPSWITCH,	nWolfUnitDSW + 0,	"dip"},
+	{"Dip A",			BIT_DIPSWITCH,	{nWolfUnitDSW + 0}, "dip"},
 	{"Dip B", 			BIT_DIPSWITCH, 	{nWolfUnitDSW + 1}, "dip"},
 };
 
@@ -1719,8 +1719,6 @@ struct BurnDriver BurnDrvNbamhtx = {
 	NULL, nbamhtxRomInfo, nbamhtxRomName, NULL, NULL, NULL, NULL, NbahangtInputInfo, NbahangtDIPInfo,
     WolfUnitInit, WolfUnitExit, WolfUnitFrame, WolfUnitDraw, WolfUnitScan, &nWolfUnitRecalc, 0x8000,
     400, 256, 4, 3
-};
-
 };
 
 // Rampage: World Tour (rev 1.3)
