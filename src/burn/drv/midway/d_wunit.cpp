@@ -4,8 +4,8 @@
 #include "burnint.h"
 #include "midwunit.h"
 
-#define WUNIT_SCREEN_WIDTH  320
-#define WUNIT_SCREEN_HEIGHT 240
+#define WUNIT_SCREEN_WIDTH  400
+#define WUNIT_SCREEN_HEIGHT 256
 
 static struct BurnInputInfo Mk3InputList[] = {
 	{"P1 Coin",			BIT_DIGITAL,	nWolfUnitJoy3 + 0,	"p1 coin"},
@@ -447,7 +447,7 @@ static struct BurnInputInfo WwfmaniaInputList[] = {
 	{"Service Mode",	BIT_DIGITAL,	nWolfUnitJoy3 + 4,	"diag"},
 	{"Tilt",		    BIT_DIGITAL,	nWolfUnitJoy3 + 3,	"tilt"},
 	{"Dip A",		    BIT_DIPSWITCH,	nWolfUnitDSW + 0,	"dip"},
-	{"Dip B",		    BIT_DIPSWITCH,	nWolfUnitDSW + 1,	"dip"},
+	{"Dip B", 			BIT_DIPSWITCH, 	{nWolfUnitDSW + 1}, "dip"},
 };
 
 STDINPUTINFO(Wwfmania)
