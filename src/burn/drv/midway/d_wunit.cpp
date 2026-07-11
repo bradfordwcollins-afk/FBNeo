@@ -4,6 +4,9 @@
 #include "burnint.h"
 #include "midwunit.h"
 
+#define WUNIT_SCREEN_WIDTH  320
+#define WUNIT_SCREEN_HEIGHT 240
+
 static struct BurnInputInfo Mk3InputList[] = {
 	{"P1 Coin",			BIT_DIGITAL,	nWolfUnitJoy3 + 0,	"p1 coin"},
 	{"P1 Start",		BIT_DIGITAL,	nWolfUnitJoy3 + 2,	"p1 start"},
