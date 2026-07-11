@@ -1718,7 +1718,7 @@ struct BurnDriver BurnDrvNbamhtx = {
 	BDF_GAME_WORKING | BDF_CLONE | BDF_HACK, 4, HARDWARE_MIDWAY_WUNIT, GBF_SPORTSMISC, 0,
 	NULL, nbamhtxRomInfo, nbamhtxRomName, NULL, NULL, NULL, NULL, NbahangtInputInfo, NbahangtDIPInfo,
 	WolfUnitInit, WolfUnitExit, WolfUnitFrame, WolfUnitDraw, WolfUnitScan, &nWolfUnitRecalc, 0x8000,
-	WUNIT_SCREEN_WIDTH, WUNIT_SCREEN_HEIGHT, 4, 3
+	400, 256, 4, 3
 };
 
 // Rampage: World Tour (rev 1.3)
